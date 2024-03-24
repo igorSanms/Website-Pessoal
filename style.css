@@ -1,0 +1,394 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bem-vindo{
+    visibility: hidden;
+}
+
+
+.btn-contato button{
+    padding: 10px 40px;
+    border: 0;
+    background-color: #B01118;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .2s;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 6px #b01119d2;
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #B01118;
+}
+
+/* ESTILO BANNER/NAV */
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: .2s;
+}
+
+header.rolagem{
+    background-color: #fff;
+    padding: 1px 4%;
+    z-index: 99999;
+}
+
+header.rolagem a{
+    color: #B01118;
+}
+
+header .logo{
+    height: 80px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header a:hover{
+    transform: scale(1.05);
+} 
+
+.banner{
+    height: 100vh;
+    background-image: url(img/banner.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1{
+    font-size: 4em;
+}
+
+.banner h1 span{
+    color: #75182bdb;
+}
+
+
+/* ESTILO DO MENU SITE */
+section.menu-do-site{
+    padding: 90px 4%;
+}
+
+section.menu-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.menu-do-site h1{
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.menu-do-site .txt-menu-site h1 span{
+    color: #B01118;
+}
+
+.menu-do-site .txt-menu-site p{
+    margin: 40px 0;
+    text-align: justify;
+    
+}
+
+/* ESTILO ESPECIALIDADES */
+section.especialidades{
+    padding: 80px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidade-box{
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    transition: .3s;
+}
+
+.especialidades .especialidade-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.389);
+}
+
+.especialidades .especialidade-box img{
+    height: 200px;
+}
+
+.especialidades .especialidade-box h3{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+
+/* ESTILO PORTFÓLIO */
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.229);
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+section.portfolio a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.229);
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* FOOTER */
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.44);
+    background-color: #24262b;
+}
+
+.interface ul{
+    list-style: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-coluna{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-coluna h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-coluna h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #B01118;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-coluna ul li :not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-coluna ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-coluna ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-coluna .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-coluna .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+
+
+
+@media screen and (max-width: 1020px){
+    header{
+        padding: 5px 4%;
+        position: fixed;
+        background-color: #ffffff;
+    }
+  
+    /* CLASSES GERAIS */ 
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    .menu-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    
+
+    /* CABECALHO */
+    .menu-navegacao, .btn-contato, .banner{
+        display: none;
+    }
+
+
+    /* MENU SITE */
+    section.menu-do-site .flex{
+        gap: 40px;
+    }
+
+    section.menu-do-site{
+        padding: 150px 4%;
+    }
+
+    .menu-do-site h1{
+        font-size: 30px;
+    }
+    .menu-do-site .imagem-menu-site img{
+        width: 100%;
+    }
+
+    
+    /* ESTILO ESPECIALIDADES */
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    .especialidades .especialidade-box img{
+        height: 150px;
+    }
+
+
+    /* ESTILO PORTFÓLIO */
+    section.portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex{
+        gap: 50px;
+    }
+
+    /* FOOTER */
+    .footer-coluna{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 574px){
+    .footer-coluna{
+        width: 100%;
+    }
+}
+
